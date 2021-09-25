@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-if [[ -z "${release}" ]]; then
+if [[ -z "${CFTAG}" ]]; then
   exit 1
 fi
 
 cp README_TEMPATE.md README.md
-echo "${release}" >> README.me
+echo "${CFTAG}" >> README.md
 
 exit 0

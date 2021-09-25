@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Set Tailscale version from source
-        run: echo "TSTAG=$(curl https://api.github.com/repos/cloudflare/cloudflared/tags -s | jq '.[0].name' -r)" >> $GITHUB_ENV
+        run: echo "CFTAG=$(curl https://api.github.com/repos/cloudflare/cloudflared/tags -s | jq '.[0].name' -r)" >> $GITHUB_ENV
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -24,6 +24,6 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actions
-          message: 'update to cloudflared ${{ env.TSTAG }}'
+          message: 'update to cloudflared ${{ env.CFTAG }}'
           branch: main
-          tag: "v${{ env.TSTAG }}"
+          tag: "v${{ env.CFTAG }}"

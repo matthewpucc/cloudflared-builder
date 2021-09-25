@@ -25,5 +25,5 @@ jobs:
         with:
           default_author: github_actions
           message: 'update to cloudflared ${{ env.TSTAG }}'
-          branch: master
+          branch: main
           tag: "v${{ env.TSTAG }}"

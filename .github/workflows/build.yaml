@@ -29,5 +29,5 @@ jobs:
         with:
           context: .
           platforms: linux/amd64,linux/arm,linux/arm64
-          tags: us.gcr.io/mywanderings/cloudflared:${{ steps.get_version.outputs.version-without-v }}
+          tags: us.gcr.io/mywanderings/cloudflared:latest,us.gcr.io/mywanderings/cloudflared:${{ steps.get_version.outputs.version-without-v }}
           push: true

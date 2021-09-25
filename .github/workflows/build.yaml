@@ -22,7 +22,7 @@ jobs:
         uses: battila7/get-version-action@v2
       - uses: actions/checkout@v2
         with:
-          repository: 'https://github.com/cloudflare/cloudflared.git'
+          repository: 'cloudflare/cloudflared'
           ref: ${{ steps.get_version.outputs.version-without-v }}
           path: 'cloudflared'
       - uses: docker/build-push-action@v2

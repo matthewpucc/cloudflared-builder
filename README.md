@@ -1,4 +1,4 @@
 # Cloudflared builder
 
 ## Current Version
-Version: 2021.12.4
+Version: 2022.1.0
